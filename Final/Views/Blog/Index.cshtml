@@ -1,0 +1,115 @@
+﻿@model HomeViewModel
+
+<section id="blog">
+    <div class="container">
+        <div class="row m-auto text-center">
+            <div class="col-md-8 align-items-center m-auto text-center">
+                <img src="~/admin/assets/img/@Model.blogs[1].Image" alt="" width="70%" class="mb-3" data-aos="fade-down" data-aos-delay="300">
+                <h5 class="mb-2" data-aos="fade-down" data-aos-delay="400">@Model.blogs[1].Title</h5>
+            </div>
+            <div class="row">
+                <div class="col-md-7 align-items-center m-auto text-center">
+                    <h3 class="mb-3" data-aos="fade-up" data-aos-delay="300">@Model.blogs[1].Subtitle</h3>
+                    <p class="mb-5" data-aos="fade-up" data-aos-delay="300">@Model.blogs[1].Part2</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="work-banner">
+    <div class="container">
+        <div class="row m-auto">
+            @foreach (Blog item in Model.blogs)
+            {
+                <div class="col-lg-4 col-md-6 col-12" id="work-item1" data-aos="fade-left" data-aos-delay="400">
+                    <a href="/BlogItem/Index/@item.Id" style="color: black">
+                        <div class="work-item">
+                            <img src="~/admin/assets/img/@item.Image" alt="">
+                            <div class="white-part" data-aos="fade-right" data-aos-delay="500">
+                                <span>@item.Title</span>
+                                <p class="fw-bold">
+                                    @item.Subtitle
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<section id="blogComment">
+    <div class="container">
+        <div class="row" style="padding-right: 0px;">
+            <div class="row">
+                <div class="col-lg-7 col-md-10 col-11 m-auto">
+                    <h2 class="m-auto text-center pt-5" style="font-family: 'Italiana', serif;" data-aos="fade-up" data-aos-delay="600">What do you think?</h2>
+                    <hr style="color: #5c6134" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-7 col-md-10 col-12 m-auto text-center">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <div class="collapsed mb-4 mt-2" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" style="background-color: white; border-color: white; cursor: pointer;">
+                                    <p class="text-center m-auto" style="font-size: 15px" data-aos="fade-up" data-aos-delay="700">SHOW COMMENTS / LEAVE A COMMENT</p>
+                                </div>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div>
+                                    <div class="comment-part">
+                                        <div style="text-align: start;">
+                                            <h5 style="font-family: 'Italiana', serif" class="mt-3 mb-3">
+                                               @Model.blogComments.Count() Comments
+                                            </h5>
+                                            @foreach (BlogComment item in Model.blogComments)
+                                            {
+                                            <p><b>@item.Name</b></p>
+                                            <span style="font-size: 13px;">
+                                                @item.Comment
+                                            </span>
+                                            <hr style="color: #5c6134" />
+                                            }
+                                            <section>
+                                                <div class="container information">
+                                                    <div class="row">
+                                                        <h4 style="font-family: 'Italiana', serif" class="mt-3 mb-3 text-center">
+                                                            Leave a reply
+                                                        </h4>
+                                                        <p style="font-size: 11px;" class="text-center">
+                                                            Your email address will not be published. Required fields are marked *
+                                                        </p>
+                                                        <div class="col-lg-12 col-md-12 col-12 m-auto">
+                                                            <div class="inner1">
+                                                                <form method="post" action="/Blog/Idea">
+                                                                    <label for="exampleFormControlTextarea1">Comment *</label>
+                                                                    <textarea class="form-control pb-3 mt-3 mb-2" id="exampleFormControlTextarea1" rows="5" name="comment"></textarea>
+                                                                    <label for="" class="pb-3">Name *</label>
+                                                                    <input class="form-control form-control-lg mb-2" type="text" name="name" />
+                                                                    <label for="" class="pb-3">Email *</label>
+                                                                    <input class="form-control form-control-lg mb-2" type="email" name="email" />
+                                                                    <div class="col-md-4 mt-3">
+                                                                        <div class="col-12">
+                                                                            <input type="submit" value="POST COMMENT" class="shop-btn btn btn-outline-dark login-btn m-auto" />
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

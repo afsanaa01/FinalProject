@@ -1,0 +1,10 @@
+﻿@model List<ServiceCategory>
+
+    <div class="col-md-12">
+        <div class="row">
+            @foreach (ServiceCategory item in Model)
+            {
+                <a href="/service/index/@item.Id">@item.Name</a>
+            }
+        </div>
+    </div>

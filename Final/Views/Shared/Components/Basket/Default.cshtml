@@ -1,0 +1,53 @@
+﻿@model List<Basket>
+@{ double total = 0; }
+
+<div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel" style="font-family: 'Italiana', serif; font-size: 30px;">Cart (@Model.Count())</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+</div>
+<div class="offcanvas-body">
+    @if (Model.Count == 0)
+    {
+        <i class="bi bi-bag" style="font-size: 100px; padding-top: 300px;"></i>
+        <p>No products in the cart.</p>
+    }
+    else
+    {
+        <div class="row pt-4">
+            @foreach (Basket item in Model)
+            {
+                total += (double)item.Price * item.Number;
+                <div class="col-lg-4 col-md-4 col-4">
+                    <img src="~/image/@item.Image" alt="" style="width: 70%">
+                </div>
+                <div class="col-lg-6 col-md-6 col-6" style="font-size: 14px; text-align: start;">
+                    <p>Name: @item.Name</p>
+                    <p>Select size: @item.Size</p>
+                    <p>Number: @item.Number</p>
+                </div>
+                <div class="col-lg-2 col-md-2 col-2">
+                    <a href="/basket/delete/@item.ProductId" type="submit"><i class="bi bi-trash3 x-icon" style="color: #6a6e49"></i></a>
+                </div>
+                <div class="col-lg-9 col-md-9 col-9"></div>
+                <div class="col-lg-3 col-md-3 col-9 pt-3 pb-3">
+                    <p><i>$@item.Price</i></p>
+                </div>
+                <hr class="mb-5"/>
+            }
+            <div>
+                <div class="col-md-9 col-9">
+                    <p style="text-align: start;"><b>Subtotal:</b><i> $@total.ToString("F2")</i></p>
+                </div>
+                <hr>
+            </div>
+            <div class="row m-auto">
+                <div class="col-md-6 col-6">
+                    <a class="btn btn-outline-dark" asp-action="Index" asp-controller="Category" type="button" style="margin-top: 0px!important; border-radius: 20px;">CHECK OUT</a>
+                </div>
+                <div class="col-md-6 col-6">
+                    <a class="btn btn-dark" asp-action="Index" asp-controller="Basket" type="button" style="margin-top: 0px!important; border-radius: 20px;">VIEW CART</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

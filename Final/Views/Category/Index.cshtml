@@ -1,0 +1,42 @@
+﻿@model List<Product>
+
+<section id="products">
+    <div class="container">
+        <p style="color: #6a6e49; font-size: 13px;"><a href="/home/index" class="link" style="text-decoration: none; color: #6a6e49;">Home</a> / Products</p>
+        <h1 style="font-family: 'Italiana', serif">All Products</h1>
+        <div class="row">
+            @*<div class="col-lg-4 col-md-4">
+                <hr />
+            </div>
+            <div class="col-md-8" id="productInfo">*@
+                <hr class="hr-sm" />
+                <div class="row product-container">
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <input id="search" type="text" placeholder="Search..." class="form-control" />
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-12">
+                        <select style="width: 100%"
+                                class="form-select mb-3"
+                                aria-label="Default select example"
+                                id="filter">
+                            <option selected value="">Default</option>
+                            <option value="decrease">Short by price: low to high</option>
+                            <option value="increase">Short by price: high to low</option>
+                            <option value="letter">Short by name</option>
+                        </select>
+                    </div>
+                    <div class="row product-container" id="search-results">
+                    </div>
+                    <partial name="_ProductsPartial">
+                </div>
+                        <div class="text-center mt-5">
+                            <a href="" id="load-more-button" class="btn btn-outline-dark">View More</a>
+                        </div>
+            </div>
+        </div>
+    @*</div>*@
+</section>
+
+<input type="hidden" id="prodCount" value="@ViewBag.Count"/>

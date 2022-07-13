@@ -1,0 +1,126 @@
+﻿@model Final.Models.Blog
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Blog</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+        <dd class = "col-sm-10">
+            <img src="~/admin/assets/img/@Model.Image" style="border-radius:10%; width:50px">
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Subtitle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Subtitle)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Part1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Part1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Part2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Part2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Part3)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Part3)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name3)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name3)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Part4)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Part4)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name4)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name4)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Part5)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Part5)
+        </dd>
+        <dt class = "col-sm-2">
+            <img src="~/admin/assets/img/@Model.InnerImage" style="border-radius:10%; width:50px">
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InnerImage)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name5)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name5)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Part6)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Part6)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Quote)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Quote)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Part7)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Part7)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-secondary">Edit</a> |
+    <a asp-action="Index" class="btn btn-gray-200">Back to List</a>
+</div>

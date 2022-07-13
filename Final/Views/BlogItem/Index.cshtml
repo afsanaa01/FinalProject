@@ -1,0 +1,103 @@
+﻿@model Blog
+
+<section id="blogItem mb-5"
+         style="padding-top: 200px; background-color: #f1efeb">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-10 col-10 m-auto text-center">
+                <h1 class="mb-3" style="font-family: 'Fasthand', cursive" data-aos="fade-down" data-aos-delay="300">
+                    @Model.Subtitle
+                </h1>
+                <p class="mb-5" data-aos="fade-down" data-aos-delay="400">
+                    @Model.Title
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="blogInfo mb-5" style="padding-top: 100px">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-10 col-10 m-auto" style="text-align: start">
+                <p data-aos="fade-down" data-aos-delay="300">
+                    @Model.Part1
+                </p>
+                <h3 class="mb-4 mt-5" style="font-family: 'Italiana', serif" data-aos="fade-down" data-aos-delay="400">
+                    @Model.Name1
+                </h3>
+                <p class="mb-5" data-aos="fade-down" data-aos-delay="500">
+                    @Model.Part2
+                </p>
+                <h3 class="mb-4 mt-5" style="font-family: 'Italiana', serif" data-aos="fade-down" data-aos-delay="600">
+                    @Model.Name2
+                </h3>
+                <p class="mb-5" data-aos="fade-down" data-aos-delay="700">
+                    @Model.Part3
+                </p>
+                <h3 class="mb-4 mt-5" style="font-family: 'Italiana', serif" data-aos="fade-down" data-aos-delay="800">
+                    @Model.Name3
+                </h3>
+                <p class="mb-5" data-aos="fade-down" data-aos-delay="900">
+                    @Model.Part4
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-7 col-md-11 col-11 m-auto" data-aos="fade-left" data-aos-delay="300">
+                <img src="~/admin/assets/img/@Model.InnerImage"
+                     alt=""
+                     width="100%"
+                     style="
+                box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+                  rgba(0, 0, 0, 0.07) 0px 2px 4px,
+                  rgba(0, 0, 0, 0.07) 0px 4px 8px,
+                  rgba(0, 0, 0, 0.07) 0px 8px 16px,
+                  rgba(0, 0, 0, 0.07) 0px 16px 32px,
+                  rgba(0, 0, 0, 0.07) 0px 32px 64px;
+              " />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-10 col-10 m-auto" style="text-align: start">
+                <h3 class="mb-4 mt-5" style="font-family: 'Italiana', serif" data-aos="fade-right" data-aos-delay="400">
+                    @Model.Name4
+                </h3>
+                <p class="mb-5" data-aos="fade-right" data-aos-delay="500">
+                    @Model.Part5
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-7 col-md-10 col-11 m-auto"
+                 style="
+              text-align: start;
+              background-color: #cfd3ad85;
+              box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+                rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
+                rgba(0, 0, 0, 0.07) 0px 8px 16px,
+                rgba(0, 0, 0, 0.07) 0px 16px 32px,
+                rgba(0, 0, 0, 0.07) 0px 32px 64px;
+            ">
+                <div class="row">
+                    <div class="col-lg-9 col-md-11 col-11 m-auto">
+                        <h5 class="mt-5 text-center"
+                            style="font-family: 'Italiana', serif"
+                            data-aos="fade-left" data-aos-delay="500">
+                            @Model.Quote
+                        </h5>
+                    </div>
+                    <i class="bi bi-brightness-alt-high text-center mb-5 mt-3"
+                       style="font-size: 30px"></i>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-lg-6 col-md-10 col-10 m-auto" style="text-align: start">
+                <p class="mb-5" data-aos="fade-right" data-aos-delay="600">
+                    @Model.Part6
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

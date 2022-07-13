@@ -1,0 +1,165 @@
+﻿@model ProductViewModel
+
+<section id="products">
+    <div class="container">
+        <p style="color: #6a6e49; font-size: 13px;"><a href="/home/index" class="link" style="text-decoration: none; color: #6a6e49;">Home</a> / Products</p>
+        <h1 style="font-family: 'Italiana', serif">Products</h1>
+        <div class="row">
+            <div class="col-lg-4 col-md-4">
+                <hr />
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo"
+                                    aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                CATEGORY
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo"
+                             class="accordion-collapse collapse"
+                             aria-labelledby="flush-headingTwo"
+                             data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                @foreach (SubInfo item in Model.subInfos)
+                                {
+                                <div class="form-check pt-1">
+                                    <input class="form-check-input"
+                                           type="checkbox"
+                                           value=""
+                                           id="defaultcheck1" />
+                                    <label class="form-check-label" for="defaultcheck1">
+                                        <a href="/SubInfo/Index/@item.Id" style="text-decoration:none; color:black;">@item.Name</a>
+                                    </label>
+                                </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTw">
+                            <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTw"
+                                    aria-expanded="false"
+                                    aria-controls="flush-collapseTw">
+                                COLOR
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTw"
+                             class="accordion-collapse collapse"
+                             aria-labelledby="flush-headingTw"
+                             data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                @foreach (Color item in Model.colors)
+                                {
+                                    <div class="form-check">
+                                        <input class="form-check-input"
+                                               type="checkbox"
+                                               value=""
+                                               id="defaultCheck1" />
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            <a href="/Color/Index/@item.Id" style="text-decoration:none; color:black;">@item.Name</a>
+                                        </label>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingT">
+                            <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseT"
+                                    aria-expanded="false"
+                                    aria-controls="flush-collapseT">
+                                CUSTOMER RATING
+                            </button>
+                        </h2>
+                        <div id="flush-collapseT"
+                             class="accordion-collapse collapse"
+                             aria-labelledby="flush-headingT"
+                             data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                @foreach (Rating item in Model.ratings)
+                                {
+                                    <div class="form-check">
+                                        <input class="form-check-input"
+                                               type="checkbox"
+                                               value=""
+                                               id="defaultCheck1" />
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            <a href="/Rating/Index/@item.Id" style="text-decoration: none; color: #6a6e49; ">@item.Number</a>
+                                        </label>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+            </div>
+            <div class="col-md-8">
+                <hr class="hr-sm" />
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <input id="search" type="text" placeholder="Search..." class="form-control" />
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-lg-4 col-md-12 col-12">
+                        <select style="width: 100%"
+                                class="form-select mb-3"
+                                aria-label="Default select example"
+                                id="filter">
+                            <option selected value="">Default</option>
+                            <option value="decrease">Short by price: low to high</option>
+                            <option value="increase">Short by price: high to low</option>
+                            <option value="letter">Short by name</option>
+                        </select>
+                    </div>
+                    <div class="row product-container" id="search-results">
+
+                    </div>
+                    @foreach (Product item in Model.products)
+                    {
+                        <div class="col-lg-4 col-md-6 col-6 mt-4">
+                            <div class="card inner2">
+                                <div class="inner">
+                                    <img src="~/admin/assets/img/@item.Image"
+                                         class="card-img-top product"
+                                         alt="product" />
+                                    <div>
+                                        <a class="shop-btn btn btn-outline-dark select-btn1"
+                                           href="/product/select/@item.Id"
+                                           data-aos="fade-up"
+                                           data-aos-delay="700"
+                                           type="button">SELECT OPTION</a>
+                                    </div>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h4 class="card-text pt-3">@item.Name</h4>
+                                    <span>$@item.Price</span> | 
+                                    <a style="color:black;"
+                                       href="/product/detail/@item.Id"
+                                       data-aos="fade-up"
+                                       data-aos-delay="700"
+                                       type="button">
+                                        <i class="bi bi-heart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    @*<div class="text-center mt-5">
+            <a href="" id="load-more-button" class="btn btn-outline-dark">View More</a>
+        </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

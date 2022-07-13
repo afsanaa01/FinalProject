@@ -1,0 +1,39 @@
+﻿@model HomeViewModel
+
+<section id="service-banner"
+         data-aos="fade-down"
+         data-aos-delay="400">
+</section>
+
+<section id="login" style="padding-top: 50px !important">
+    <div class="container information">
+        <div class="row">
+            <div class="col-lg-4 col-md-9 col-9 m-auto">
+                <h1 class="pb-2 text-center" style="font-family: 'Italiana', serif">
+                    Contact Us
+                </h1>
+                <p class="pb-4 text-center" style="font-size: 12px">
+                    Whether it’s an enquiry about a current order, our flower school
+                    or event our team of experts are here to help and will respond as
+                    soon as possible.
+                </p>
+                <div class="inner1">
+                    <form method="post" action="/home/test">
+                        <label for="" class="pb-2">Name *</label>
+                        <input class="form-control form-control-lg mb-2" type="text" name="name" />
+                        <label for="" class="pb-2">Email *</label>
+                        <input class="form-control form-control-lg mb-2" type="email" name="email" />
+                        <label for="" class="pb-2">Phone number *</label>
+                        <input class="form-control form-control-lg mb-2"
+                               type="text" name="phone"/>
+                        <label for="exampleFormControlTextarea1">Your message *</label>
+                        <textarea class="form-control pb-3 mt-3 mb-2" id="exampleFormControlTextarea1" rows="4" name="message"></textarea>     
+                            <div class="col-12 m-auto text-center mt-4">
+                                <input type="submit" value="SUBMIT" class="shop-btn btn btn-outline-dark login-btn m-auto" style="border-radius: 20px!important;" />
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

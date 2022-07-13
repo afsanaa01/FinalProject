@@ -1,0 +1,11 @@
+﻿@model List<Basket>
+@if (Model.Count == 0)
+{
+    <i class="bi bi-bag" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" style="cursor: pointer;"></i>
+}
+else
+{
+
+<i class="bi bi-bag" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" style="cursor: pointer;"></i>
+<div class="numberCircle">@Model.Count()</div>
+}

@@ -1,0 +1,45 @@
+﻿@model HomeViewModel
+
+<section id="faq" style="margin-top: 200px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h1 class="pb-2" style="font-family: 'Italiana', serif;">FAQ</h1>
+                @foreach (Faq item in Model.faqs)
+                {
+                    <a href="#@item.Type" class="link1" style="text-decoration: none;">@item.Type</a> <br>
+                }
+                <hr>
+            </div>
+            <div class="col-md-9">
+                @foreach (Faq item in Model.faqs)
+                {
+                    <h2 class="pb-2" id="@item.Type" style="font-family: 'Italiana', serif;"></h2>
+                    <hr>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="#@item.Type">
+                                <button class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#@item.Type"
+                                        aria-expanded="false"
+                                        aria-controls="@item.Type">
+                                    @item.Question
+                                </button>
+                            </h2>
+                            <div id="@item.Type"
+                                 class="accordion-collapse collapse"
+                                 aria-labelledby="@item.Type"
+                                 data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body mt-2">
+                                    <p>@item.Answer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

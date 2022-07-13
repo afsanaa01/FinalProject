@@ -1,0 +1,78 @@
+﻿@model Service
+
+<section id="service-info" class="pb-5" style="margin-top: 180px">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-11 m-auto text-center">
+                <h1 class="pb-2" style="font-family: 'Italiana', serif;">@Model.Title1</h1>
+                <h5>@Model.Text1</h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="ourStore" class="pt-5 pb-5">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-md-6">
+                <div class="item-image">
+                    <div class="line">
+                    </div>
+                    <h6>FIORE FLOWERS</h6>
+                    <div class="item-photo text-center">
+                        <img src="https://fiore.vamtam.com/wp-content/uploads/2022/02/pexels-roman-odintsov-8514224-1.jpg" class="img-fluid" style="border-top-left-radius: 0px; border-top-right-radius: 0px; width: 70%;" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="item-info item3" style="background-color: white!important;">
+                    <div class="location">
+                        <h1 class="pt-3 pb-3" style="font-family: 'Italiana', serif;">@Model.ExpertTitle</h1>
+                        <p class="pb-3">@Model.ExpertText</p>
+                        
+                        <a class="shop-btn btn btn-outline-dark" asp-action="Index" asp-controller="Experts" type="button" style="margin-top: 15px!important;">SPEAK TO OUR EXPERTS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="our-process">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 m-auto text-center" >
+                <h1 class="pb-2" style="font-family: 'Italiana', serif;">@Model.Title2</h1>
+                <p>@Model.Text2</p>
+                </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="container-fluid gallery service-gallery" style="margin-top: 200px; margin-bottom: 200px;">
+    <div class="row">
+        <div class="text-center pb-5 col-md-3 m-auto">
+            <h1 style="font-family: 'Italiana', serif;">Selected from our gallery</h1>
+        </div>
+    </div>
+    <div class="row m-auto text-center">
+        <div class="gallery-item col-sm-4 col-md-4 mb-3">
+            <a href="~/admin/assets/img/@Model.Gallery1" class="fancybox" data-fancybox="gallery1">
+                <img src="~/image/@Model.Gallery1" alt="" style="width:100%">
+            </a>
+        </div>
+        <div class="gallery-item col-sm-4 col-md-4 mb-3" style="margin-top: 80px;">
+            <a href="~/admin/assets/img/@Model.Gallery2" class="fancybox" data-fancybox="gallery1">
+                <img src="~/image/@Model.Gallery2" alt="" style="width:100%">
+            </a>
+        </div>
+        <div class="gallery-item col-sm-4 col-md-4 mb-3">
+            <a href="~/admin/assets/img/@Model.Gallery3" class="fancybox" data-fancybox="gallery1">
+                <img src="~/image/@Model.Gallery3" alt="" style="width:100%">
+            </a>
+        </div>
+    </div>
+</div>

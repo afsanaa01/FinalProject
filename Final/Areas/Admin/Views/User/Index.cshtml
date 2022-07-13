@@ -1,0 +1,57 @@
+﻿@model ICollection<AppUserViewModel>
+
+@{ ViewData["Title"] = "Index"; }
+
+<h1>Index</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Username
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                IsActive
+            </th>
+            <th>
+                Settings
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            @if (!item.IsActive)
+            {
+        <td style="color:red">DeActive</td> }
+                        else
+                        {
+        <td style="color:dodgerblue">Active</td>}
+            <td>
+                @if (item.UserName != User.Identity.Name)
+                {
+        <a asp-controller="User" asp-action="Activation" asp-route-id="@item.Id" class="btn btn-outline-danger mb-2">
+            @(item.IsActive?"DeActivate":"Activate")
+        </a>}
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

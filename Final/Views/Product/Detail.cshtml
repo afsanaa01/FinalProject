@@ -1,0 +1,115 @@
+﻿@model Product
+
+<section id="products">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-8" data-aos="fade-right" data-aos-delay="400">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-12">
+                        <img src="~/admin/assets/img/@Model.Image" alt="" style="width: 100%; margin-bottom: 15px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius: 15px;" class="pro" />
+                    </div>
+                    @foreach (ProductImage item in Model.ProductImages)
+                    {
+                        <div class="col-lg-4 col-md-4 col-4">
+                            <img src="~/admin/assets/img/@item.Img" alt="" style="width: 100%; margin-bottom: 15px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius: 15px;" class="pro" />
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-12" data-aos="fade-left" data-aos-delay="500">
+                <form method="post" action="/wishlist/cart/@Model.Id">
+                    <h2 style="font-family: 'Italiana', serif;" class="pb-3">@Model.Name</h2>
+                    <input type="text" id="fname" name="name" value="@Model.Name" class="d-none">
+                    <input type="text" id="fname" name="image" value="@Model.Image" class="d-none">
+                    <p class="pb-2">$@Model.Price</p>
+                    <input type="text" id="fname" name="price" value="@Model.Price" class="d-none">
+                    <hr>
+                    <p style="font-size:14px; color: #898c66;">
+                        Behold – the timeless elegance of magnificent white Avalanche roses and dainty camomille, weaving throughout. Grace’s simple beauty has cemented its place as a McQueens Flowers classic.
+                    </p>
+                    <p style="font-size:14px; color: #898c66;" class="pb-1">Please note – the bouquet pictured represents a medium size. Whilst we make every effort to source the exact ingredients, occasionally it may be necessary for our florists to substitute with a similar stem.</p>
+                    <a href="mailto:www.mcqueensflowers.com" class="sign" style="font-size:14px; color: #898c66;">www.mcqueensflowers.com</a>
+                    <hr>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                    Delivery information
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p><b>New York</b></p><br><p>
+                                        Standard – $15, delivery charge is free for orders over $50. For the same-day New York delivery service, please place your order before 2.00pm, Monday – Friday. For same-day New York delivery service on Saturdays, place before 10.00am.
+                                        <br>
+                                    <p><b>Nationwide Delivery</b></p><br><p>
+                                        Standard – $20. A next-day nationwide delivery service is available Tuesday – Saturday for orders placed by 2pm the previous day.
+                                        Each bouquet will arrive with flower care instructions. Please note, certain fragile products are available for a New York delivery only.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    Size guide
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body"><img src="~/image/Horizontal_size_guide.webp" alt="" style="width:100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col-lg-6 col-md-6 col-10 pt-2 pb-2">
+                        <button type="button" class="btn btn-outline-dark icon" href="https://twitter.com/i/flow/login">
+                            <i class="bi bi-twitter"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-dark icon" href="https://www.facebook.com/">
+                            <i class="bi bi-facebook"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-dark icon" href="https://tr.pinterest.com/">
+                            <i class="bi bi-pinterest"></i>
+                        </button>
+                    </div>
+                    <hr>
+                    <div class="row mt-4 mb-5 buttons m-auto">
+                        <div class="col-lg-12 col-md-12 col-12 m-auto">
+                            <input type="submit" value="ADD TO WISHLIST" href="/Wishlist/Index" class="shop-btn btn btn-outline-dark login-btn m-auto mt-0" style="border-radius: 20px!important;" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="ourStore" class="pt-5 pb-5">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-lg-6 col-md-12 col-12">
+                <div class="item-image">
+                    <div class="line" data-aos="fade-right" data-aos-delay="300">
+                    </div>
+                    <h6>FIORE FLOWERS</h6>
+                    <div class="item-photo text-center" data-aos="fade-right" data-aos-delay="400">
+                        <img src="~/image/care.webp" class="img-fluid" style="border-top-left-radius: 0px; border-top-right-radius: 0px;" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-12">
+                <div class="item-info item3">
+                    <div class="location">
+                        <h1 class="pt-3 pb-3" style="font-family: 'Italiana', serif;" data-aos="fade-left" data-aos-delay="500">Care Instructions</h1>
+                        <h6 class="pt-1 pb-2" data-aos="fade-left" data-aos-delay="600">FLOWERS WATER</h6>
+                        <p class="pb-3" data-aos="fade-left" data-aos-delay="700">Change vase water every other day (add flower food to the new water if available). All stems should be submerged. If your flowers came in a basket or other container with foam, add fresh water every day.</p>
+                        <h6 class="pt-1 pb-2" data-aos="fade-left" data-aos-delay="800">FLOWERS LIGHT/TEMPERATURE</h6>
+                        <p class="pb-3" data-aos="fade-left" data-aos-delay="900">Display your bouquet or flower arrangement in a cool, draft-free area. Avoid direct sunlight, which causes the flowers to die more quickly.</p>
+                        <h6 class="pt-1 pb-2" data-aos="fade-left" data-aos-delay="1000">FLOWERS PRUNING</h6>
+                        <p class="pb-3" data-aos="fade-left" data-aos-delay="1100">Immediately remove dead or wilting leaves and stems. Recut your flower and foliage stems just before putting them back into new water.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

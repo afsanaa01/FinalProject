@@ -1,0 +1,322 @@
+﻿@model HomeViewModel
+
+<section id="home-banner" class="pb-5">
+    <div class="container">
+        <div class="row align-items-center m-auto">
+            <div class="col-lg-6 col-md-8 col-12 bannerInfo">
+                <div class="container">
+                    <h2 class="title animation-text" style="font-family: 'Italiana', serif; font-size: 55px;" data-aos="fade-right" data-aos-delay="400">
+                        <b>
+                            <span class="title-word title-word-1">We</span>
+                            <span class="title-word title-word-2">tell</span>
+                            <span class="title-word title-word-3">stories</span><br>
+                            <span class="title-word title-word-4">with</span>
+                            <span class="title-word title-word-5">flowers</span>
+                        </b>
+                    </h2>
+                    <a class="shop-btn btn btn-outline-dark" href="/category/index" data-aos="fade-right" data-aos-delay="500" type="button" style="width: 30%;">SHOP NOW</a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-4 col-12">
+                <img src="~/image/banner.webp" alt="" class="banner-img" style="width: 95%" data-aos="fade-left" data-aos-delay="600">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="season-finest" class="pt-5 pb-5 flower-carousel">
+    <div class="container">
+        <div class="text-center pb-5" data-aos="fade-up" data-aos-delay="300">
+            <h1 class="pb-3" style="font-family: 'Italiana', serif;">Season Finest</h1>
+            <button class="me-5 btn btn-light" id="flower-link">FLOWERS</button>
+            <button class="btn btn-light" id="plant-link">PLANTS</button>
+        </div>
+        <div class="carousel" data-flickity='{ "groupCells": true }'>
+            @foreach (SeasonFinest item in Model.seasonFinests)
+            {
+                <div class="carousel-cell">
+                    <div class="item">
+                        <div class="card">
+                            <div class="inner">
+                                <img src="~/admin/assets/img/@item.Image" class="card-img-top product" alt="flower">
+                            </div>
+                            <div class="card-body text-center">
+                                <h4 class="card-text pt-3" style="font-family: 'Italiana', serif;">@item.Name</h4>
+                                <span>@item.Price</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<section id="season-finest" class="pt-5 pb-5 plant-carousel d-none">
+    <div class="container">
+        <div class="text-center pb-5" data-aos="fade-up" data-aos-delay="300">
+            <h1 class="pb-3" style="font-family: 'Italiana', serif;">Season Finest</h1>
+            <button class="me-5 btn btn-light" id="flower-link">FLOWERS</button>
+            <button class="btn btn-light" id="plant-link">PLANTS</button>
+        </div>
+        <div class="carousel" data-flickity='{ "groupCells": true }'>
+            @foreach (FinestPlant item in Model.finestPlants)
+            {
+                <div class="carousel-cell">
+                    <div class="item">
+                        <div class="card">
+                            <div class="inner">
+                                <img src="~/admin/assets/img/@item.Image" class="card-img-top product" alt="flower">
+                            </div>
+                            <div class="card-body text-center">
+                                <h4 class="card-text pt-3" style="font-family: 'Italiana', serif;">@item.Name</h4>
+                                <span>@item.Price</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+    <section id="info-part" class="pt-5 pb-5">
+        <div class="row g-0">
+            <div class="col-lg-4 col-md-12 col-12">
+                <div class="item1">
+                    <div class="line1">
+                    </div>
+                    <div class="item-photo text-center" data-aos="fade-right" data-aos-delay="400">
+                        <img src="~/image/wedding.webp" class="img-fluid" />
+                        <h1 class="pt-3 pb-3" style="font-family: 'Italiana', serif;">Weddings</h1>
+                        <p>Our talented wedding team is <br> dedicated to telling your unique story <br> through extraordinary and memorable <br> floral designs.</p>
+                        <a href="/service/index/1" class="link find">FIND OUT MORE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-12">
+                <div class="item2">
+                    <div class="item-photo">
+                        <div class="line2" data-aos="fade-up" data-aos-delay="600">
+                        </div>
+                        <h6>FIORE FLOWERS</h6>
+                        <img src="https://fiore.vamtam.com/wp-content/uploads/2021/12/logo-white.svg" alt="" class="logo-white">
+                        <img src="~/image/middle.webp" class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-12">
+                <div class="item3">
+                    <div class="line3">
+                    </div>
+                    <div class="item-photo text-center" data-aos="fade-up" data-aos-delay="600">
+                        <img src="~/image/tables.jpg" class="img-fluid" />
+                        <h1 class="pt-3 pb-3" style="font-family: 'Italiana', serif;">Private Events</h1>
+                        <p>We are on hand to speak with you to <br> create the most beautiful flowers and <br> plants for your event.</p>
+                        <a href="/service/index/5" class="link1">FIND OUT MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="popular" class="pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="row">
+                    <div class="row">
+                        <div class="col-md-2 m-auto text-center mb-3">
+                            <img src="https://fiore.vamtam.com/wp-content/uploads/2022/01/lleaf.svg" alt="leaf" data-aos="fade-down" data-aos-delay="400">
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center pb-5">
+                    <h1 style="font-family: 'Italiana', serif;" data-aos="fade-down" data-aos-delay="500">Shop by Popular Ocasions</h1>
+                </div>
+                @foreach (Popular item in Model.populars)
+                {
+                    <div class="col-lg-3 col-md-6 col-6">
+                        <div class="card" data-aos="fade-down" data-aos-delay="600">
+                            <img src="~/admin/assets/img/@item.Image" class="card-img-top" alt="flower">
+                            <div class="card-body text-center">
+                                <h4 class="card-text pt-3" style="font-family: 'Italiana', serif;">@item.Title</h4>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    <section id="ourStory">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-5 col-12 m-auto">
+                    <div class="back-color m-auto" data-aos="fade-up" data-aos-delay="500">
+                        <img src="~/image/vase_cropped.webp" alt="" class="vase">
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-9 m-auto">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-11 col-sm-12 m-auto text-upper">
+                            <h1 class="text-center story-text" style="font-size: 90px; font-family: 'Italiana', serif;" data-aos="fade-up" data-aos-delay="700">A premier and family-owned luxury floral boutique</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="animation-image" class="mt-5 mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-5 col-5 m-auto text-center">
+                    <img class="image" src="~/image/360degree.webp" alt="" width="100" height="100">
+                </div>
+                <div class="row mt-5">
+                    <div class="col-lg-7 col-md-9 col-11 m-auto text-center">
+                        <h2 style="font-family: 'Italiana', serif;" data-aos="fade-up" data-aos-delay="600">Fiore is a floral atelier, workshop and retail space led by Fiola Johnson. Our studio specialises in producing truly original, innovative floral designs for events, shoots, workplaces and weddings.</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-5 col-10 m-auto text-center">
+                        <a class="shop-btn btn btn-outline-dark mb-5" href="/product/index/1" data-aos="fade-up" data-aos-delay="700" type="button">SHOP OUR FLOWERS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gifts" class="pt-5 pb-5">
+        <div class="container">
+            <div class="row m-auto">
+                <div class="text-center pb-5" data-aos="fade-down" data-aos-delay="500">
+                    <h1 style="font-family: 'Italiana', serif;">Gifts</h1>
+                    <p>Furnish your beautiful bouquet with a gift from our handpicked edit.</p>
+                </div>
+                @foreach (Gift item in Model.gifts)
+                {
+                    <div class="col-lg-4 col-md-4 col-11">
+                        <div class="card" data-aos="fade-up" data-aos-delay="600">
+                            <div class="inner">
+                                <img src="~/admin/assets/img/@item.Image" class="card-img-top product" alt="flower">
+                            </div>
+                            <div class="card-body text-center">
+                                <h4 class="card-text pt-3" style="font-family: 'Italiana', serif;">@item.Name</h4>
+                                <span>@item.Price</span>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    <section id="ourStore" class="pt-5 pb-5">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-lg-6 col-md-12 col-12">
+                    <div class="item-image">
+                        <div class="line">
+                        </div>
+                        <h6>FIORE FLOWERS</h6>
+                        <div class="item-photo text-center" data-aos="fade-right" data-aos-delay="500">
+                            <img src="~/image/store.webp" class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-12">
+                    <div class="item-info item3">
+                        <div class="location">
+                            <h1 class="pt-3 pb-3" style="font-family: 'Italiana', serif;" data-aos="fade-left" data-aos-delay="600">Our Store</h1>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-6" data-aos="fade-left" data-aos-delay="700">
+                                    <p class="pt-5 pb-3">
+                                        Goddard Hall 80 <br>
+                                        Washington Square E, <br>
+                                        New York, NY 10003, USA <br>
+                                    </p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-6 pt-5 pb-3" data-aos="fade-left" data-aos-delay="700">
+                                    <a href="tel:+44 (0) 207 739 1521" style="text-decoration: none; color: black; font-size: 13px;">+44 (0) 207 739 1521</a><br>
+                                    <a href="mailto:info@ferme.com" style="text-decoration: none; color: black; font-size: 13px;">info@ferme.com</a>
+                                </div>
+                            </div>
+                            <hr class="mt-4">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-6" data-aos="fade-left" data-aos-delay="800">
+                                    <p>
+                                        Monday – Friday: <br>
+                                        7am – 7pm <br>
+                                    </p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-6" data-aos="fade-left" data-aos-delay="900">
+                                    <p>
+                                        Saturday – Sunday: <br>
+                                        8am – 7pm <br>
+                                    </p>
+                                </div>
+                            </div>
+                            <a class="shop-btn btn btn-outline-dark mb-5" href="https://www.google.co.kr/maps/?hl=en" data-aos="fade-up" data-aos-delay="1000" type="button">VIEW ON MAP</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @*<section class="work-banner pt-5 pb-5">
+        <div class="row">
+            <div class="col-md-2 m-auto text-center mb-3">
+                <img src="https://fiore.vamtam.com/wp-content/uploads/2022/01/lleaf.svg" alt="leaf" data-aos="fade-down" data-aos-delay="400">
+            </div>
+        </div>
+        <div class="text-center pb-5">
+            <h1 style="font-family: 'Italiana', serif;" data-aos="fade-up" data-aos-delay="300">The Journals</h1>
+        </div>
+        <div class="container">
+            <div class="row m-auto">
+                @foreach (Blog item in Model.blogs)
+                {
+                    <div class="col-lg-4 col-md-6 col-12" id="work-item1" data-aos="fade-left" data-aos-delay="400">
+                        <a href="/BlogItem/Index/@item.Id" style="color: black">
+                            <div class="work-item">
+                                <img src="~/image/@item.Image" alt="">
+                                <div class="white-part" data-aos="fade-right" data-aos-delay="500">
+                                    <span>@item.Title</span>
+                                    <p class="fw-bold" style="font-family: 'Italiana', serif;">
+                                        @item.Subtitle
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>*@
+
+    <div class="gallery pt-5 pb-4">
+        <div class="text-center pb-5">
+            <h1 style="font-family: 'Italiana', serif;" data-aos="fade-up" data-aos-delay="300">Follow us</h1>
+            <a href="https://www.instagram.com/" class="link sign" data-aos="fade-up" data-aos-delay="400">FIORE</a>
+        </div>
+        <div class="row mt-4 g-0">
+            @foreach (Gallery item in Model.galleries)
+            {
+                <div class="gallery-item col-6 col-lg-2 col-md-6" data-aos="fade-right" data-aos-delay="400">
+                    <a href="~/admin/assets/img/@item.Image" class="fancybox" data-fancybox="gallery1">
+                        <img src="~/admin/assets/img/@item.Image" alt="" class="gallery-width">
+                    </a>
+                </div>
+            }
+            <div class="row">
+                <div class="col-lg-8 col-md-10 col-8 m-auto" data-aos="fade-right" data-aos-delay="1000">
+                    <p class="text-center pt-5">
+                        Our customers say <b>Excellent</b> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-half"></i>
+                        <b>4.5</b> out of 5 based on <b>7,980 reviews</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
