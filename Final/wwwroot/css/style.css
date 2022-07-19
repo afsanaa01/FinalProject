@@ -707,7 +707,9 @@ input, select, textarea {
 input:hover, select:hover, textarea:hover {
     border: 1px solid #6a6e49 !important;
 }
-
+.nav1:hover{
+    cursor: pointer;
+}
 .accordion-body input {
     padding: 0px !important;
     border-radius: 25% !important;

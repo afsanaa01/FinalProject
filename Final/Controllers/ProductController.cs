@@ -51,5 +51,10 @@ namespace Final.Controllers
             Product product = await db.Products.Include(x => x.Color).Include(x => x.Rating).Include(x => x.ProductImages).FirstOrDefaultAsync(x => x.Id == id);
             return View(product);
         }
+
+        public IActionResult LoadProductsAsView(int skip = 0)
+        {
+            return PartialView("_ProductsPartial", db.Products.Skip(skip).Take(6).ToList());
+        }
     }
 }

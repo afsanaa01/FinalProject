@@ -28,39 +28,9 @@
     <div class="container">
         <div class="text-center pb-5" data-aos="fade-up" data-aos-delay="300">
             <h1 class="pb-3" style="font-family: 'Italiana', serif;">Season Finest</h1>
-            <button class="me-5 btn btn-light" id="flower-link">FLOWERS</button>
-            <button class="btn btn-light" id="plant-link">PLANTS</button>
         </div>
         <div class="carousel" data-flickity='{ "groupCells": true }'>
             @foreach (SeasonFinest item in Model.seasonFinests)
-            {
-                <div class="carousel-cell">
-                    <div class="item">
-                        <div class="card">
-                            <div class="inner">
-                                <img src="~/admin/assets/img/@item.Image" class="card-img-top product" alt="flower">
-                            </div>
-                            <div class="card-body text-center">
-                                <h4 class="card-text pt-3" style="font-family: 'Italiana', serif;">@item.Name</h4>
-                                <span>@item.Price</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            }
-        </div>
-    </div>
-</section>
-
-<section id="season-finest" class="pt-5 pb-5 plant-carousel d-none">
-    <div class="container">
-        <div class="text-center pb-5" data-aos="fade-up" data-aos-delay="300">
-            <h1 class="pb-3" style="font-family: 'Italiana', serif;">Season Finest</h1>
-            <button class="me-5 btn btn-light" id="flower-link">FLOWERS</button>
-            <button class="btn btn-light" id="plant-link">PLANTS</button>
-        </div>
-        <div class="carousel" data-flickity='{ "groupCells": true }'>
-            @foreach (FinestPlant item in Model.finestPlants)
             {
                 <div class="carousel-cell">
                     <div class="item">

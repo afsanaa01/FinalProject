@@ -2,32 +2,32 @@
 
 @foreach (Product item in Model)
 {
-    <div class="col-lg-4 col-md-6 col-6 mt-4">
-        <div class="card inner2">
-            <div class="inner">
-                <img src="~/admin/assets/img/@item.Image"
-                     class="card-img-top product"
-                     alt="flower" />
-                <div>
-                    <a class="shop-btn btn btn-outline-dark select-btn1"
-                       href="/product/select/@item.Id"
-                       data-aos="fade-up"
-                       data-aos-delay="700"
-                       type="button">SELECT OPTION</a>
-                </div>
-
-            </div>
-            <div class="card-body text-center">
-                <h4 class="card-text pt-3">@item.Name</h4>
-                <span>$@item.Price</span> | 
-                    <a style="color:black;"
-                       href="/product/detail/@item.Id"
-                       data-aos="fade-up"
-                       data-aos-delay="700" 
-                       type="button"><i class="bi bi-heart"></i>
-                    </a>
+<div class="col-lg-4 col-md-6 col-6 mt-4">
+    <div class="card inner2">
+        <div class="inner">
+            <img src="~/admin/assets/img/@item.Image"
+                 class="card-img-top product"
+                 alt="product" />
+            <div>
+                <a class="shop-btn btn btn-outline-dark select-btn1"
+                   href="/product/select/@item.Id"
+                   data-aos="fade-up"
+                   data-aos-delay="700"
+                   type="button">SELECT OPTION</a>
             </div>
         </div>
+        <div class="card-body text-center">
+            <h4 class="card-text pt-3">@item.Name</h4>
+            <span>$@item.Price</span> |
+            <a style="color:black;"
+               href="/product/detail/@item.Id"
+               data-aos="fade-up"
+               data-aos-delay="700"
+               type="button">
+                <i class="bi bi-heart"></i>
+            </a>
+        </div>
     </div>
+</div>
 }
 <hr style="margin-top:50px!important"/>

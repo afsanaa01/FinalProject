@@ -75,11 +75,6 @@ C:\Users\HP\Desktop\Final\Final\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\
 C:\Users\HP\Desktop\Final\Final\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Experts\Delete.cshtml.g.cs
 C:\Users\HP\Desktop\Final\Final\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Experts\Details.cshtml.g.cs
 C:\Users\HP\Desktop\Final\Final\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Experts\Index.cshtml.g.cs
-C:\Users\HP\Desktop\Final\Final\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\FinestPlants\Create.cshtml.g.cs
-C:\Users\HP\Desktop\Final\Final\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\FinestPlants\Delete.cshtml.g.cs
-C:\Users\HP\Desktop\Final\Final\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\FinestPlants\Details.cshtml.g.cs
-C:\Users\HP\Desktop\Final\Final\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\FinestPlants\Edit.cshtml.g.cs
-C:\Users\HP\Desktop\Final\Final\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\FinestPlants\Index.cshtml.g.cs
 C:\Users\HP\Desktop\Final\Final\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Galleries\Create.cshtml.g.cs
 C:\Users\HP\Desktop\Final\Final\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Galleries\Delete.cshtml.g.cs
 C:\Users\HP\Desktop\Final\Final\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Galleries\Details.cshtml.g.cs
